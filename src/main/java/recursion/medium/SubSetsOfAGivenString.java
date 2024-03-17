@@ -16,7 +16,7 @@ public class SubSetsOfAGivenString {
     System.out.println("List of SubSet is :: " + subSets(INPUT));
     }
     private  static List<String> subSets(String str){
-    return subSetsHelper(str, 0, "", new ArrayList<String>()).stream().sorted().collect(Collectors.toList());
+    return subSetsHelper(str, 0, "", new ArrayList<String>()).stream().skip(1).sorted().collect(Collectors.toList());
     }
     private static List<String> subSetsHelper(String str, int i , String curr ,List<String> list){
     if (i == str.length()) {
