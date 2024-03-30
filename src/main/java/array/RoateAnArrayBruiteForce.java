@@ -68,17 +68,12 @@ public class RoateAnArrayBruiteForce {
     for(int i = 0; i < b.length; i++) {
       ans[i]=rotateArray(arr,b[i]);
     }
-    // int k = 3;
-    // rotateArray(arr, k);
-
-    System.out.println("Printing final array elements.....");
       for(int i = 0; i < ans.length; i++) {
           System.out.println("ans[i] = " + Arrays.toString(ans[i]));
       }
   }
 
   private static int[] rotateArray(int arr[], int k) {
-    System.out.println("Inside rotateArray()...........");
       int rotate[] = Arrays.copyOf(arr,arr.length);
     for (int i = 0; i < k; i++) {
       int temp = rotate[0];
@@ -86,7 +81,6 @@ public class RoateAnArrayBruiteForce {
           rotate[j] = rotate[j + 1];
       }
         rotate[rotate.length - 1] = temp;
-      System.out.println("arr = " + Arrays.toString(rotate));
     }
     return rotate;
   }
