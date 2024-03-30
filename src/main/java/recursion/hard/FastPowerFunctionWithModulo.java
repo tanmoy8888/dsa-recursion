@@ -1,7 +1,6 @@
-/*
+
 package recursion.hard;
 
-*/
 /**
  * Given an integer n, return true if it is a power of three. Otherwise, return false.
  * An integer n is a power of three, if there exists an integer x such that n == 3x.
@@ -18,9 +17,9 @@ package recursion.hard;
  * Explanation: There is no x where 3x = 0.
  *
  * @author Tanmoy Mukherjee
- *//*
+ */
 
-public class FastPowerFunctionWithModulo {
+/*public class FastPowerFunctionWithModulo {
     public static void main(String[] args){
      int number = 27;
      boolean isPowerofThree = false;
@@ -34,5 +33,5 @@ public class FastPowerFunctionWithModulo {
 
 
     }
-}
-*/
+}*/
+
