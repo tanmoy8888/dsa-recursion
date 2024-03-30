@@ -1,4 +1,4 @@
-package leetcode.contest;
+package recursion.contest;
 
 import java.util.HashMap;
 import java.util.Map;

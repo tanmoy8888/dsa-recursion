@@ -1,7 +1,10 @@
+/*
 package recursion.medium;
 
 import java.util.Arrays;
+import java.util.Collections;
 
+*/
 /**
  * You have a list arr of all integers in the range [1, n] sorted in a strictly increasing order.
  * Apply the following algorithm on arr:
@@ -24,7 +27,8 @@ import java.util.Arrays;
  * <p>1 <= n <= 109
  *
  * @author Tanmoy Mukherjee
- */
+ *//*
+
 public class EliminationGame {
 
    private static final int NUMBER = 9;
@@ -34,14 +38,32 @@ public class EliminationGame {
     }
 
     public int lastRemaining(int n) {
-        int [] arr = new int[n];
+        Integer [] arr = new Integer[n];
         for(int i = 0; i <n ; i++) {
             arr[i]=i+1;
         }
     System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
         int iteration = arr.length/2;
     System.out.println("iteration = " + iteration);
-        return iteration;
+    for(int j = 1; j <=iteration ; j++) {
+
+        if(j%2==0){
+         for(int k = 0; k < arr.length ; k++) {
+             arr[k] = k+1;
+         }
+         }
+         if(j%2 !=0){
+         Arrays.sort(arr,Collections.reverseOrder());
+         for(int i = 0; i < ; i++) {
+
+         }
+         }
+        }
 
     }
+        //return iteration;
+
+
+
 }
+*/

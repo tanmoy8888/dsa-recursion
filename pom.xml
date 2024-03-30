@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.tanmoy.recursion</groupId>
-    <artifactId>dsa-recursion</artifactId>
+    <artifactId>dsa-problems</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
