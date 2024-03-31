@@ -1,4 +1,4 @@
-package array;
+package array.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +38,7 @@ public class MinimumDifference {
     System.out.println("MinimumDifference is :: "+minimumAbsDifference(arr));
     }
 
-    public static List<List< Integer>> minimumAbsDifference(int[] arr) {
+    public static List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List< Integer>> ans = new ArrayList<>();
         Arrays.sort(arr);
         int n = arr.length;
