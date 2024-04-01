@@ -20,6 +20,14 @@ public class TwoSumProblem {
     int right = arr.length - 1;
     List<List<Integer>> ans = new ArrayList<>();
     while (left < right) {
+        if(left > 0 && (arr[left] == arr[left-1])){
+            left++;
+            continue;
+        }
+        if(right < arr.length-1 && (arr[right] == arr[right+1])){
+            right--;
+            continue;
+        }
       if ((arr[left] + arr[right]) > sum) {
         right--;
       } else if ((arr[left] + arr[right]) < sum) {
