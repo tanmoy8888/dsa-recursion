@@ -9,7 +9,8 @@ import java.util.List;
  */
 public class ThreeSumProblem {
     public static void main(String[] args){
-    int [] arr = {4,2,-1,-3,0,1,2,3};
+    //int [] arr = {4,2,-1,-3,0,1,2,3};
+    int [] arr = {-1 ,0 ,1 ,2 ,-1, -4};
     Arrays.sort(arr);
     List<List<Integer>> triplets = new ArrayList<>();
     for(int i = 0; i < arr.length-2; i++) {
@@ -28,7 +29,7 @@ public class ThreeSumProblem {
     int right = arr.length - 1;
     List<List<Integer>> ans = new ArrayList<>();
     while (left < right) {
-        if(left > 0 && (arr[left] == arr[left-1])){
+        if(left > startFrom && (arr[left] == arr[left-1])){
             left++;
             continue;
         }
