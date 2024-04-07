@@ -31,7 +31,7 @@ package array.medium;
  *
  * @author Tanmoy Mukherjee
  */
-public class MinimumOperationsMatrix {
+/*public class MinimumOperationsMatrix {
     public static void main(String[] args){
 
     }
@@ -42,4 +42,4 @@ public class MinimumOperationsMatrix {
 
 
     }
-}
+}*/
