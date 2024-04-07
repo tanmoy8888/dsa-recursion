@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Lowest => 2 , Highest => 9
  * @author Tanmoy Mukherjee
  */
-public class FindKthSmallestAndLargestElementsofAnArray {
+public class FindKthSmallestAndLargestElementsOfAnArray {
     public static void main(String[] args){
         int [] arr = {1,2,4,5,7,9,12};
         int K = 2;
