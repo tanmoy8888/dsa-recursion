@@ -3,9 +3,9 @@ package array.easy;
 /**
  * @author Tanmoy Mukherjee
  */
-public class FindMaoxOfArray {
+public class FindMaxElementOfArray {
     public static void main(String[] args){
-      int [] arr = {1,2,3,4,5};
+      int [] arr = {1,2,-3,4,-5};
     System.out.println("findMax(arr) = " + findMax(arr));
     }
     public static int findMax(int [] arr){
