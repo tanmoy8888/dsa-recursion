@@ -26,12 +26,16 @@ public class FindKthSmallestAndLargestElementsOfAnArray {
         return ans;
     }
 
-    private static int[] removeDuplicates(int [] arr){
+    /*private static int[] removeDuplicates(int [] arr){
     Set<Integer> set = new HashSet<>();
         for(int i = 0; i < arr.length; i++) {
                 set.add(arr[i]);
             }
        return set.stream().mapToInt(Integer::intValue).toArray();
+    }*/
+
+    private static int[] removeDuplicates(int [] arr){
+       return Arrays.stream(arr).distinct().toArray();
     }
 }
 
