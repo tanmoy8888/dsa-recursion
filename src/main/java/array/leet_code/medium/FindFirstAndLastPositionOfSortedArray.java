@@ -40,8 +40,40 @@ public class FindFirstAndLastPositionOfSortedArray {
       int target =8;
     System.out.println("searchRange(nums,target) = " + Arrays.toString(searchRange(nums, target)));
   }
+    public static int[] searchRange(int[] nums, int target) {
+        if(nums.length == 0) return new int[0];
+        int start =0;
+        int end =nums.length-1;
+        int startIndex =-1;
+        int endIndex =-1;
+        int [] ans = new int[2];
+        while (end > start){
+                if(nums[start] == target){
+        System.out.println("nums[start] = " + nums[start]);
+        System.out.println("start = " + start);
+                    startIndex = start;
+                }
+                if(nums[end] == target){
+        System.out.println("nums[end] = " + nums[end]);
+        System.out.println("end = " + end);
+                    endIndex = end;
+                }
+                if(startIndex == -1){
+                    start++;
+                }
+                if(endIndex == -1){
+                     end--;
+                }
+                if(startIndex != -1 && endIndex != -1){
+                    break;
+                }
+        }
+        ans[0]=startIndex;
+        ans[1]=endIndex;
+        return ans;
+    }
 
-  public static int[] searchRange(int[] nums, int target) {
+  /*public static int[] searchRange(int[] nums, int target) {
          if(nums.length == 0) return new int[0];
          int start =0;
          int end =nums.length-1;
@@ -52,10 +84,10 @@ public class FindFirstAndLastPositionOfSortedArray {
          boolean foundEndIndex = false;
          int [] ans = new int[2];
          while (end > start){
-          /*   if(end >= startIndex){
+          *//*   if(end >= startIndex){
                  start++;
                  end--;
-             }*/
+             }*//*
       System.out.println("end = " + end);
       System.out.println("start = " + start);
              if(nums[start] == target){
@@ -69,15 +101,15 @@ public class FindFirstAndLastPositionOfSortedArray {
         System.out.println("foundEndIndex = " + foundEndIndex);
              }
 
-            /* if(!foundStartIndex){
+            *//* if(!foundStartIndex){
                  start++;
              }
              else if(!foundEndIndex){
                  end--;
-             }*/
+             }*//*
          }
          ans[0]=startIndex;
          ans[1]=endIndex;
          return ans;
-  }
+  }*/
 }
