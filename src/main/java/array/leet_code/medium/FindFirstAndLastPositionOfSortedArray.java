@@ -37,8 +37,9 @@ public class FindFirstAndLastPositionOfSortedArray {
 
      public static void main(String[] args){
       int [] nums ={5,7,7,8,8,10};
+       //  int [] nums ={1};
+      //int target =1;
       int target =8;
-      //int target =6;
     System.out.println("searchRange(nums,target) = " + Arrays.toString(searchRange(nums, target)));
   }
     public static int[] searchRange(int[] nums, int target) {
@@ -48,7 +49,7 @@ public class FindFirstAndLastPositionOfSortedArray {
         int start =0;
         int end =nums.length-1;
         int [] ans = new int[2];
-        while (end > start){
+        while (end >= start){
                 if(nums[start] == target){
                     startIndex = start;
                 }
