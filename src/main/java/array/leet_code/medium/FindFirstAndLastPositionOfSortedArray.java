@@ -73,44 +73,4 @@ public class FindFirstAndLastPositionOfSortedArray {
         ans[1]=endIndex;
         return ans;
     }
-
-  /*public static int[] searchRange(int[] nums, int target) {
-         if(nums.length == 0) return new int[0];
-         int start =0;
-         int end =nums.length-1;
-    System.out.println("end = " + end);
-         int startIndex =-1;
-         int endIndex =-1;
-         boolean foundStartIndex = false;
-         boolean foundEndIndex = false;
-         int [] ans = new int[2];
-         while (end > start){
-          *//*   if(end >= startIndex){
-                 start++;
-                 end--;
-             }*//*
-      System.out.println("end = " + end);
-      System.out.println("start = " + start);
-             if(nums[start] == target){
-                startIndex = start;
-                foundStartIndex = true;
-             }
-             else if(nums[end] == target){
-                 endIndex = end;
-                 foundEndIndex = true;
-        System.out.println("nums[end] = " + nums[end]);
-        System.out.println("foundEndIndex = " + foundEndIndex);
-             }
-
-            *//* if(!foundStartIndex){
-                 start++;
-             }
-             else if(!foundEndIndex){
-                 end--;
-             }*//*
-         }
-         ans[0]=startIndex;
-         ans[1]=endIndex;
-         return ans;
-  }*/
 }
