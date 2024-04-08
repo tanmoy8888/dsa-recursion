@@ -37,26 +37,22 @@ public class FindFirstAndLastPositionOfSortedArray {
 
      public static void main(String[] args){
       int [] nums ={5,7,7,8,8,10};
-      //int target =8;
-      int target =6;
+      int target =8;
+      //int target =6;
     System.out.println("searchRange(nums,target) = " + Arrays.toString(searchRange(nums, target)));
   }
     public static int[] searchRange(int[] nums, int target) {
-        if(nums.length == 0) return new int[0];
-        int start =0;
-        int end =nums.length-1;
         int startIndex =-1;
         int endIndex =-1;
+        if(nums.length == 0) return new int[]{startIndex,endIndex};
+        int start =0;
+        int end =nums.length-1;
         int [] ans = new int[2];
         while (end > start){
                 if(nums[start] == target){
-        System.out.println("nums[start] = " + nums[start]);
-        System.out.println("start = " + start);
                     startIndex = start;
                 }
                 if(nums[end] == target){
-        System.out.println("nums[end] = " + nums[end]);
-        System.out.println("end = " + end);
                     endIndex = end;
                 }
                 if(startIndex == -1){
