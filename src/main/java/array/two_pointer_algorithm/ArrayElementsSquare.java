@@ -42,8 +42,13 @@ public class ArrayElementsSquare {
                 end--;
             }
         }
-         //Arrays.sort(ans , Collections.reverseOrder());
-        return ans;
+        int [] finalAns = new int[ans.length];
+        int j=0;
+        for(int i = ans.length-1; i >=0 ; i--) {
+            finalAns[j]=ans[i];
+            j++;
+        }
+        return finalAns;
     }
 
    /* private static int[] square(int [] arr){
