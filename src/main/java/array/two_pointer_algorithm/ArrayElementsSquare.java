@@ -1,6 +1,7 @@
 package array.two_pointer_algorithm;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Problem : Given an array in sorted in non-decreasing order , return an array of
@@ -10,15 +11,42 @@ import java.util.Arrays;
  *
  * O/P => {4,16,36,49,100}
  *
+ * Another Example :
+ * I/P => {-10,-3,-2,1,4,5}
+ *
+ * O/P => Should be => {1,4,9,16,25,100}
+ * NOT THIS ONE =>  {100,9,4,1,16,25}  => BECAUSE THIS ALSO NEED TO BE SORTED AS WELL !!!!!!!!! [This is the twist !!!!]
+ *
  * @author Tanmoy Mukherjee
  */
 public class ArrayElementsSquare {
     public static void main(String[] args){
-        int [] arr = {2,4,6,7,10};
+        //int [] arr = {2,4,6,7,10};
+        int [] arr = {-10,-3,-2,1,4,5};
     System.out.println("Arrays.toString(arr) = " + Arrays.toString(square(arr)));
   }
 
     private static int[] square(int [] arr){
+        if(arr.length == 0) return new int[0];
+        int start =0;
+        int end = arr.length-1;
+        int [] ans = new int[arr.length];
+        int k =0;
+        while (start <= end){
+            if(Math.abs(arr[start])  > Math.abs(arr[end])){
+                ans[k++] = arr[start] * arr[start];
+                start++;
+            }
+            else {
+                ans[k++] = arr[end] * arr[end];
+                end--;
+            }
+        }
+         //Arrays.sort(ans , Collections.reverseOrder());
+        return ans;
+    }
+
+   /* private static int[] square(int [] arr){
         if(arr.length == 0) return new int[0];
         int start =0;
         int end = arr.length-1;
@@ -41,6 +69,6 @@ public class ArrayElementsSquare {
             }
         }
         return arr;
-    }
+    }*/
 
 }
