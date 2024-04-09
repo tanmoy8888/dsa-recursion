@@ -50,30 +50,4 @@ public class ArrayElementsSquare {
         }
         return finalAns;
     }
-
-   /* private static int[] square(int [] arr){
-        if(arr.length == 0) return new int[0];
-        int start =0;
-        int end = arr.length-1;
-        int middle = start+end/2;
-    System.out.println("middle = " + middle);
-        while (start < end){
-      System.out.println("check....");
-            if(start < middle){
-                arr[start] = arr[start] * arr[start];
-        System.out.println("arr[start] = " + arr[start]);
-                start++;
-            }
-            if(end >= middle){
-                arr[end] = arr[end] * arr[end];
-        System.out.println("arr[end] = " + arr[end]);
-                end--;
-            }
-            if(middle > start && middle < end){
-                arr[middle] = arr[middle] * arr[middle];
-            }
-        }
-        return arr;
-    }*/
-
 }
