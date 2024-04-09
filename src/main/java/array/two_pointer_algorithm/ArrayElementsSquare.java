@@ -1,7 +1,6 @@
 package array.two_pointer_algorithm;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Problem : Given an array in sorted in non-decreasing order , return an array of
