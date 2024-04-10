@@ -7,7 +7,8 @@ import java.util.Arrays;
  */
 public class PrefixSum {
     public static void main(String[] args){
-     int [] arr ={1,2,3,4,5};
+     //int [] arr ={1,2,3,4,5};
+     int [] arr ={1,1,1,1,1};
     System.out.println("Arrays.toString(prefixSum(arr)) = " + Arrays.toString(prefixSum(arr)));
     }
 
