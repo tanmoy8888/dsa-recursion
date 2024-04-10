@@ -30,23 +30,24 @@ public class ArrayElementsSquare {
         int start =0;
         int end = arr.length-1;
         int [] ans = new int[arr.length];
-        int k =0;
+        int k =arr.length-1;
         while (start <= end){
             if(Math.abs(arr[start])  > Math.abs(arr[end])){
-                ans[k++] = arr[start] * arr[start];
+                ans[k--] = arr[start] * arr[start];
                 start++;
             }
             else {
-                ans[k++] = arr[end] * arr[end];
+                ans[k--] = arr[end] * arr[end];
                 end--;
             }
         }
-        int [] finalAns = new int[ans.length];
+        /*int [] finalAns = new int[ans.length];
         int j=0;
         for(int i = ans.length-1; i >=0 ; i--) {
             finalAns[j]=ans[i];
             j++;
         }
-        return finalAns;
+        return finalAns;*/
+        return ans;
     }
 }
