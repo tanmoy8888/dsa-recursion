@@ -1,9 +1,11 @@
+/*
 package array.leet_code.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+*/
 /**
  * Given an integer x, return true if x is a
  * palindrome
@@ -36,7 +38,8 @@ import java.util.List;
  * Follow up: Could you solve it without converting the integer to a string?
  *
  * @author Tanmoy Mukherjee
- */
+ *//*
+
 public class PalindromeNumber {
     public static void main(String[] args){
         int input = -121;
@@ -78,3 +81,4 @@ public class PalindromeNumber {
     }
 
 }
+*/
