@@ -1,6 +1,8 @@
 package array.leet_code.easy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Given an integer x, return true if x is a
@@ -62,15 +64,17 @@ public class PalindromeNumber {
     }
 
     private static int [] convertNumberToArray(int x){
-        String converted = Integer.toString(x);
-        int [] arr = new int[converted.length()];
+        System.out.println("String.valueOf(x).toCharArray() = " + Arrays.toString(String.valueOf(x).toCharArray()));
+        List<Integer> list = new ArrayList<>();
         int index =0;
         while (x >0){
+      System.out.println("x = " + x);
             int reminder = x%10;
             x = x/10;
-            arr[index++] = reminder;
+            list.add(reminder);
         }
-    return arr;
+    System.out.println("list = " + list);
+    return list.stream().mapToInt(Integer::intValue).toArray();
     }
 
 }
