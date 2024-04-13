@@ -5,7 +5,7 @@ package array.prefix_sum;
  */
 public class PrintSumFromLToRIndex {
     public static void main(String[] args){
-     int [] arr = {2,4,1,3,6};
+     int [] arr = {2,4,1,3,6,5};
      int l = 1;
      int r = 3;
     System.out.println("findSum(arr,l,r) = " + findSum(arr, l, r));
@@ -21,12 +21,14 @@ public class PrintSumFromLToRIndex {
      while (start < end){
          if(left<=right){
              sum=arr[left]+ sum;
+        System.out.println("sum------------>" + sum);
          }
          if( left > right){
              break;
          }
          else{
              left++;
+        System.out.println("left = " + left);
          }
      }
      return sum;
