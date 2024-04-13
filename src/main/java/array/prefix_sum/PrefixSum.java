@@ -14,11 +14,9 @@ public class PrefixSum {
 
     public static int [] prefixSum(int [] arr){
         if(arr.length ==0) return new int[0];
-        int sum = 0;
-        for(int i = 0; i < arr.length; i++) {
-            sum=sum+arr[i];
-            arr[i]=sum;
-        }
-        return arr;
+            for(int i = 1; i < arr.length; i++) {
+                arr[i]= arr[i]+arr[i-1];
+            }
+            return arr;
     }
 }
