@@ -19,7 +19,7 @@ public class MyLinkedList {
     private  static void traverseLinkedList(Node<Integer> head){
         Node<Integer> temp = head;
         while (temp != null){
-            System.out.print(temp.val+" - > ");
+            System.out.print(temp.val+" -> ");
             temp = temp.next;
     }
   }
