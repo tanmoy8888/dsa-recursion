@@ -25,7 +25,7 @@ public class MyLinkedList {
   }
     static class Node<T>{
         T val;
-        Node next;
+        Node<T> next;
         public Node(T val){
             this.val = val;
             this.next = null;
