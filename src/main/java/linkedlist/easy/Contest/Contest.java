@@ -40,9 +40,7 @@ con.findOriginalList(head,head1);
 
   public ListNode findOriginalList(ListNode List1, ListNode List2) {
     // You can code here
-    System.out.println("Calling actualList.....");
     List<ListNode> actualList = getLinkedList(List1);
-    System.out.println("Calling shiftlist.....");
     List<ListNode> shiftPosition = getLinkedList(List2);
     int indexPosition;
     Map<Integer, ListNode> map = new HashMap<>();
@@ -60,14 +58,10 @@ con.findOriginalList(head,head1);
         keyIsduplicated = true;
       }
     }
-    System.out.println("map.entrySet() = " + map.entrySet());
     ListNode node = null;
     for(int i = 0; i < map.size()-1; i++) {
-      System.out.println("i = " + i);
       node = map.get(0);
-      System.out.println("map.get(i).val = " + map.get(i).val);
     }
-    System.out.println("Printing actual linked list..........");
     prepareLinkedList(map);
     traverseLinkedList(node);
     return (keyIsduplicated) ? new ListNode(-1) : map.get(0);
@@ -96,23 +90,21 @@ con.findOriginalList(head,head1);
       temp = temp.next;
       list.add(temp);
     }
-
-    for(ListNode node : list){
-      if (node != null) {
-        System.out.println("node.val = " + node.val);
-      }
-    }
     return list;
   }
-
-/*  private static int countTotalElements(ListNode head) {
-    ListNode temp = head;
-    int count = 0;
-    while (temp != null) {
-      System.out.print(temp.val + " -> ");
-      temp = temp.next;
-      count++;
-    }
-    return count;
-  }*/
   }
+
+class ListNode {
+  int val;
+  ListNode next;
+  ListNode() { val = 0; next = null; }
+  ListNode(int val) {
+    this.val = val;
+    next = null;
+  }
+  ListNode(int val,ListNode next) {
+    this.val = val;
+    this.next = next; }
+}
+
+
