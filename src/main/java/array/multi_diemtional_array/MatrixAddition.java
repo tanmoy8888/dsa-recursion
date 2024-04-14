@@ -1,4 +1,4 @@
-package multi_diemtional_array;
+package array.multi_diemtional_array;
 
 /**
  * @author Tanmoy Mukherjee
