@@ -1,7 +1,5 @@
 package multi_diemtional_array;
 
-import java.util.Arrays;
-
 /**
  * @author Tanmoy Mukherjee
  */
