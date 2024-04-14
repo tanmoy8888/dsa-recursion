@@ -15,7 +15,8 @@ public class DeleteDataFromAnExistingLinkedList {
         traverseLinkedList(head);
         System.out.println("\n After Deleting data in second index position");
         //insertDataIntoASpecificPosition(2,5,head);
-        Node<Integer> node = deleteDataIntoASpecificPosition(0, head);
+        //Node<Integer> node = deleteDataIntoASpecificPosition(0, head);
+        Node<Integer> node = deleteDataIntoASpecificPosition(2, head);
         traverseLinkedList(node);
     }
 
