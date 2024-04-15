@@ -37,16 +37,24 @@ public class RemoveDuplicatesFromASortedLinkedList {
         Node<Integer> temp = head;
         Node<Integer> newHead = null;
         while (nonRepeatingElement != null){
+      System.out.println("First while nonRepeatingElement -------------------------------- " + nonRepeatingElement.val);
               while (nonRepeatingElement.next != null && nonRepeatingElement.val == nonRepeatingElement.next.val){
                   nonRepeatingElement = nonRepeatingElement.next;
+        System.out.println("Second while nonRepeatingElement.val ############################### " + nonRepeatingElement.val);
               }
               if(newHead == null){
                   newHead = temp = nonRepeatingElement;
+        System.out.println("newHead.val = " + newHead.val);
+        System.out.println("temp.val = " + temp.val);
+        System.out.println("nonRepeatingElement.val = " + nonRepeatingElement.val);
               }else{
                   temp.next = nonRepeatingElement;
                   temp = nonRepeatingElement;
+        System.out.println("temp.next.val = " + temp.next.val);
+        System.out.println("temp.val = " + temp.val);
               }
               nonRepeatingElement = nonRepeatingElement.next;
+      System.out.println("End.....................@@@@@@............nonRepeatingElement.val = " + nonRepeatingElement.val);
         }
         return  newHead;
    }
