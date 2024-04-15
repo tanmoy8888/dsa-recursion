@@ -1,4 +1,4 @@
-package linkedlist.easy.doublyLinkedList;
+package linkedlist.doublyLinkedList;
 
 /**
  * My Doubly Linked List implementation

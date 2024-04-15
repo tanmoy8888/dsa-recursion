@@ -1,4 +1,4 @@
-package linkedlist.easy.doublyLinkedList;
+package linkedlist.doublyLinkedList;
 
 /**
  * Insert data into Doubly Linked List implementation

@@ -1,4 +1,4 @@
-package linkedlist.easy.Contest;
+package linkedlist.Contest;
 
 import java.util.ArrayList;
 import java.util.HashMap;

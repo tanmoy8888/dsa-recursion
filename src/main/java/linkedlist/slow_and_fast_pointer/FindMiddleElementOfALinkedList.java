@@ -1,4 +1,4 @@
-package linkedlist.easy.slow_and_fast_pointer;
+package linkedlist.slow_and_fast_pointer;
 
 import linkedlist.easy.MyLinkedList;
 
