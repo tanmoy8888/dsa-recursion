@@ -32,20 +32,20 @@ public class RemoveDuplicatesFromASortedLinkedList {
    }
 
    private static Node<Integer> removeDuplicatesFromLinkedList(Node<Integer> head){
-        Node<Integer> original = head;
+        Node<Integer> nonRepeatingElement = head;
         Node<Integer> temp = head;
         Node<Integer> newHead = null;
-        while (original != null){
-              while (original.next != null && original.val == original.next.val){
-                  original = original.next;
+        while (nonRepeatingElement != null){
+              while (nonRepeatingElement.next != null && nonRepeatingElement.val == nonRepeatingElement.next.val){
+                  nonRepeatingElement = nonRepeatingElement.next;
               }
               if(newHead == null){
-                  newHead = temp = original;
+                  newHead = temp = nonRepeatingElement;
               }else{
-                  temp.next = original;
-                  temp = original;
+                  temp.next = nonRepeatingElement;
+                  temp = nonRepeatingElement;
               }
-              original = original.next;
+              nonRepeatingElement = nonRepeatingElement.next;
         }
         return  newHead;
    }
