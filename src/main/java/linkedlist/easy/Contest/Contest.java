@@ -78,7 +78,7 @@ con.findOriginalList(head,head1);
   private static void traverseLinkedList(ListNode head) {
     ListNode temp = head;
     while (temp != null) {
-      //System.out.print(temp.val + " -> ");
+      System.out.print(temp.val + " -> ");
       temp = temp.next;
     }
     }
