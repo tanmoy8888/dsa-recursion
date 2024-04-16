@@ -1,9 +1,10 @@
 package linkedlist.single_linkedlist_palindrome;
 
 
-import linkedlist.reverse_a_linked_list.ReserveALinkedList;
 
 /**
+ * Program : Check a single linked list is palindrome or not ?
+ * 
  * @author Tanmoy Mukherjee
  */
 public class Palindrome {
@@ -19,10 +20,8 @@ public class Palindrome {
         n2.next = n3;
         n3.next = n4;
 
-        printLinkedList(head);
         // Find middle element of the linked list;
         ListNode middle = findMiddleNode(head);
-        printLinkedList(middle);
         // Now reverse the second part
        boolean isPalindrome = isLinkedListIsPalindrome(head);
        System.out.println("isPalindrome = " + isPalindrome);
@@ -64,15 +63,6 @@ public class Palindrome {
               fast = fast.next.next;
         }
         return slow;
-    }
-
-    private static void printLinkedList(ListNode head){
-        ListNode temp = head;
-        while (temp != null){
-          System.out.print(temp.val+"-->");
-          temp = temp.next;
-        }
-        System.out.println();
     }
 
     static class ListNode {
