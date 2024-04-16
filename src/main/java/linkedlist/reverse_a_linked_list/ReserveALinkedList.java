@@ -23,6 +23,7 @@ public class ReserveALinkedList {
     }
 
     private static ListNode reverseALinkedList(ListNode head){
+        if(head == null || head.next == null) return head;
         ListNode previous = head;
         ListNode current = head.next;
         head.next = null;
