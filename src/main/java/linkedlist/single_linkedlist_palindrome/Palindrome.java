@@ -4,7 +4,7 @@ package linkedlist.single_linkedlist_palindrome;
 
 /**
  * Program : Check a single linked list is palindrome or not ?
- * 
+ *
  * @author Tanmoy Mukherjee
  */
 public class Palindrome {
