@@ -41,27 +41,42 @@ public class ReorderASingleLinkedList {
             slow = slow.next;
             fast = fast.next.next;
         }
-        ListNode middle = slow;
+        ListNode l1 = head;
+        ListNode l2 = reverseALinkedList(slow);
         // traverseLinkedList(middle); // Working
-        while (true){
+        while (l1 != null && l2 != null){
       System.out.println("Inside while........................................................");
-            if(head == middle){
+            if(l1 == l2){
         System.out.println("Inside brak.......");
-                head.next = null;
+                l1.next = null;
                 break;
             }
-            ListNode headNext = head.next;
-  //    System.out.println("headNext.val = " + head.next.val);
-            ListNode middleNext = middle.next;
-//      System.out.println("middle.next.val = " + middle.next.val);
-            head.next = middle;
-            middle.next = headNext;
-            head = headNext;
-            middle = middleNext;
+            ListNode l1Next = l1.next;
+      //System.out.println("headNext.val = " + head.next.val);
+            ListNode l2Next = l2.next;
+      //System.out.println("middle.next.val = " + middle.next.val);
+            l1.next = l2;
+            l2.next = l2Next;
+            l1 = l1Next;
+            l2 = l2Next;
         }
+    System.out.println("head.val ##################################################### " + head.val);
         traverseLinkedList(head);
     }
 
+    private static ListNode reverseALinkedList(ListNode head){
+        if(head == null || head.next == null) return head;
+        ListNode previous = head;
+        ListNode current = head.next;
+        head.next = null;
+        while (current != null){
+            ListNode next = current.next;
+            current.next= previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
 
     private  static void traverseLinkedList(ListNode head){
         ListNode temp = head;
