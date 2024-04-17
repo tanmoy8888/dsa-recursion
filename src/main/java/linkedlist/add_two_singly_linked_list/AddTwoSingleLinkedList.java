@@ -11,7 +11,7 @@ import linkedlist.single_linkedlist_palindrome.Palindrome;
 public class AddTwoSingleLinkedList {
     public static void main(String[] args){
 
-        ListNode head1 =new ListNode(7);
+        /*ListNode head1 =new ListNode(7);
         ListNode n1 = new ListNode(2);
         ListNode n2 = new ListNode(4);
         ListNode n3 = new ListNode(3);
@@ -26,6 +26,22 @@ public class AddTwoSingleLinkedList {
 
         head2.next=h1;
         h1.next = h2;
+        */
+
+        ListNode head1 =new ListNode(9);
+        ListNode n1 = new ListNode(9);
+        ListNode n2 = new ListNode(9);
+
+        head1.next=n1;
+        n1.next = n2;
+
+        ListNode head2 =new ListNode(9);
+        ListNode h1 = new ListNode(9);
+        ListNode h2 = new ListNode(9);
+
+        head2.next=h1;
+        h1.next = h2;
+
         ListNode finalHead = addTwoNumbers(head1,head2);
         traverseLinkedList(finalHead);
 
