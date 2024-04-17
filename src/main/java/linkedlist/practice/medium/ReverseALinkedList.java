@@ -33,7 +33,7 @@ public class ReverseALinkedList {
         while (current != null){
             ListNode next = current.next;
             current.next = previous;
-            // update cuurent snd previous for next iterations
+            // update current snd previous for next iterations
             previous = current;
             current = next;
         }
