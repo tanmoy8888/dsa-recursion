@@ -43,6 +43,7 @@ public class Palindrome {
         // Find middle element of the linked list;
         ListNode middle = findMiddleNode(head);
         // Now reverse the second part
+        // Need to crosscheck this below condition...........
        int isPalindrome = isLinkedListIsPalindrome(head);
        System.out.println("isPalindrome = " + isPalindrome);
     }
