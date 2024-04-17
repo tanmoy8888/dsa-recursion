@@ -3,6 +3,26 @@ package linkedlist.single_linkedlist_palindrome;
 
 
 /**
+ * Problem Statement
+ * Given a singly linked list A, determine if it's a palindrome. Return 1 or 0, indicating if the palindrome is a palindrome or not.
+ *
+ * Example 1:
+ * Input:
+ * 1 -> 2 -> 3 -> 2 -> 1
+ *
+ * Output:
+ * 1
+ *
+ * Example 2:
+ * Input:
+ * 1 -> 2 -> 3 -> 2 -> 5
+ *
+ * Output:
+ * 0
+ *
+ * Constraints:
+ * 0 <= |A| <= 105
+ *
  * Program : Check a single linked list is palindrome or not ?
  *
  * @author Tanmoy Mukherjee
@@ -23,22 +43,22 @@ public class Palindrome {
         // Find middle element of the linked list;
         ListNode middle = findMiddleNode(head);
         // Now reverse the second part
-       boolean isPalindrome = isLinkedListIsPalindrome(head);
+       int isPalindrome = isLinkedListIsPalindrome(head);
        System.out.println("isPalindrome = " + isPalindrome);
     }
 
-    private static boolean isLinkedListIsPalindrome(ListNode head){
+    private static int isLinkedListIsPalindrome(ListNode head){
         ListNode first = head;
         ListNode middle = findMiddleNode(first);
         ListNode second = reverseALinkedList(middle);
         while (second != null){
             if(first.val != second.val){
-                return false;
+                return 0;
             }
             first = first.next;
             second = second.next;
         }
-        return true;
+        return 1;
     }
 
     private static ListNode reverseALinkedList(ListNode head){
